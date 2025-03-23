@@ -1,0 +1,7 @@
+---
+Language:        Cpp
+BasedOnStyle:  LLVM
+AlignConsecutiveDeclarations: true
+AccessModifierOffset: -2
+SortIncludes: Never
+...
