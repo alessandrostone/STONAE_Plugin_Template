@@ -17,6 +17,7 @@
 
 
 ```
+WIP
 
 CMAKE Juce Based Stonae Plugin Template featuring a simple GUI and a simple audio processing chain.
 
