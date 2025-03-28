@@ -9,6 +9,21 @@
 #include <functional>
 #include <juce_gui_basics/juce_gui_basics.h>
 #include <visage/app.h>
+
+// ██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗
+// ██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║
+// ██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║
+// ██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║
+// ██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║
+// ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝
+
+// ███████╗██████╗ ██╗████████╗ ██████╗ ██████╗
+// ██╔════╝██╔══██╗██║╚══██╔══╝██╔═══██╗██╔══██╗
+// █████╗  ██║  ██║██║   ██║   ██║   ██║██████╔╝
+// ██╔══╝  ██║  ██║██║   ██║   ██║   ██║██╔══██╗
+// ███████╗██████╔╝██║   ██║   ╚██████╔╝██║  ██║
+// ╚══════╝╚═════╝ ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
+
 namespace audio_plugin {
 
 struct AttachedSlider {
@@ -36,13 +51,13 @@ public:
   void AddVisageApp();
   ~AudioPluginAudioProcessorEditor() override;
 
-  void paint(juce::Graphics&) override;
+  void paint(juce::Graphics &) override;
   void resized() override;
 
 private:
   // This reference is provided as a quick way for your editor to
   // access the processor object that created it.
-  AudioPluginAudioProcessor& processorRef;
+  AudioPluginAudioProcessor &processorRef;
 
   // melatonin::Inspector inspector{*this};
 
@@ -63,4 +78,4 @@ private:
 
   JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(AudioPluginAudioProcessorEditor)
 };
-}  // namespace audio_plugin
+} // namespace audio_plugin

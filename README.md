@@ -2,22 +2,42 @@
 
 
 ```plaintext
- ____ _____ ___  _   _    _    _____ 
-/ ___|_   _/ _ \| \ | |  / \  | ____|
-\___ \ | || | | |  \| | / _ \ |  _|  
- ___) || || |_| | |\  |/ ___ \| |___ 
-|____/ |_| \___/|_| \_/_/   \_\_____|
-
- ____  _             _         _____                    _       _       
-|  _ \| |_   _  __ _(_)_ __   |_   _|__ _ __ ___  _ __ | | __ _| |_ ___ 
-| |_) | | | | |/ _` | | '_ \    | |/ _ \ '_ ` _ \| '_ \| |/ _` | __/ _ \
-|  __/| | |_| | (_| | | | | |   | |  __/ | | | | | |_) | | (_| | ||  __/
-|_|   |_|\__,_|\__, |_|_| |_|   |_|\___|_| |_| |_| .__/|_|\__,_|\__\___|
-               |___/                             |_|                    
-
+███████╗████████╗ ██████╗ ███╗   ██╗ █████╗ ███████╗                 
+██╔════╝╚══██╔══╝██╔═══██╗████╗  ██║██╔══██╗██╔════╝                 
+███████╗   ██║   ██║   ██║██╔██╗ ██║███████║█████╗                   
+╚════██║   ██║   ██║   ██║██║╚██╗██║██╔══██║██╔══╝                   
+███████║   ██║   ╚██████╔╝██║ ╚████║██║  ██║███████╗                 
+╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝                 
+                                                                     
+ █████╗ ██╗   ██╗██████╗ ██╗ ██████╗                                 
+██╔══██╗██║   ██║██╔══██╗██║██╔═══██╗                                
+███████║██║   ██║██║  ██║██║██║   ██║                                
+██╔══██║██║   ██║██║  ██║██║██║   ██║                                
+██║  ██║╚██████╔╝██████╔╝██║╚██████╔╝                                
+╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝                                 
+                                                                     
+██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗                      
+██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║                      
+██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║                      
+██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║                      
+██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║                      
+╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝                      
+                                                                     
+████████╗███████╗███╗   ███╗██████╗ ██╗      █████╗ ████████╗███████╗
+╚══██╔══╝██╔════╝████╗ ████║██╔══██╗██║     ██╔══██╗╚══██╔══╝██╔════╝
+   ██║   █████╗  ██╔████╔██║██████╔╝██║     ███████║   ██║   █████╗  
+   ██║   ██╔══╝  ██║╚██╔╝██║██╔═══╝ ██║     ██╔══██║   ██║   ██╔══╝  
+   ██║   ███████╗██║ ╚═╝ ██║██║     ███████╗██║  ██║   ██║   ███████╗
+   ╚═╝   ╚══════╝╚═╝     ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝
+                                                                     
 
 ```
 WIP
+The project is in a work in progress state. The project is not yet finished and is not ready for production use. The project is being actively developed and may contain bugs or incomplete features. Please check back later for updates.
+## Description
+This is a JUCE 8 C++20 based plugin template for creating audio plugins using the JUCE framework. The template includes a simple GUI and a simple audio processing chain. The project is designed to be easy to use and extend, making it a great starting point for your own audio plugin development.
+
+
 
 CMAKE Juce Based Stonae Plugin Template featuring a simple GUI and a simple audio processing chain.
 
@@ -31,5 +51,6 @@ CMAKE Juce Based Stonae Plugin Template featuring a simple GUI and a simple audi
 - CMake build system
 - Visage for GPU accelerated graphics rendering
 - JUCE 8 for Audio Processing
-  
+- C++20 for modern C++ features
+- Foleys_GUI_Magic for easy GUI development
 
