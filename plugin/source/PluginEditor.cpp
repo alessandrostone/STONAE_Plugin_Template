@@ -16,8 +16,6 @@ AudioPluginAudioProcessorEditor::AudioPluginAudioProcessorEditor(
 
   juce::ignoreUnused(processorRef);
 
-  // addTabsComponent();
-
   for (int i = 0; i < tabs.getNumTabs(); ++i) {
     auto *tabButton = tabs.getTabbedButtonBar().getTabButton(i);
     tabButton->setWantsKeyboardFocus(true);
@@ -30,7 +28,6 @@ AudioPluginAudioProcessorEditor::AudioPluginAudioProcessorEditor(
 
     addAndMakeVisible(sliderr.slider);
   }
-
   setSize(400, 300); // default size
 
   // addAndMakeVisible(mouseTracker);
@@ -38,31 +35,11 @@ AudioPluginAudioProcessorEditor::AudioPluginAudioProcessorEditor(
   // AddVisageApp();
 
   // open the inspector window
-  // inspector.setVisible(true);
+  // inspector.setVisible(false);
 
   // enable the inspector
-  // inspector.toggle(true);
+  // inspector.toggle(false);
   setResizeBehaviour();
-}
-
-void AudioPluginAudioProcessorEditor::addTabsComponent() {
-  slider.setSliderStyle(
-      juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
-  slider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 60, 20);
-  slider.setWantsKeyboardFocus(true);
-  tabs.addTab("Slider", juce::Colours::coral, &slider, false);
-
-  menu.addItemList(juce::StringArray{"Item 1", "Item 2", "Item 3"}, 1);
-  menu.setSelectedItemIndex(0);
-  menu.setDescription("Test Menu");
-  tabs.addTab("Menu", juce::Colours::blue, &menu, false);
-
-  button.setButtonText("Demo");
-  button.setClickingTogglesState(true);
-
-  tabs.addTab("Button", juce::Colours::red, &button, false);
-
-  addAndMakeVisible(tabs);
 }
 
 void AudioPluginAudioProcessorEditor::setResizeBehaviour() {
@@ -132,7 +109,7 @@ void AudioPluginAudioProcessorEditor::resized() {
   auto x = 0.f;
   auto y = 0.f;
   auto sliderWidth = w / static_cast<float>(sliders.size());
-  for (int i = 0; i < static_cast<int>(sliders.size()); ++i) {
+  for (size_t i = 0; i < sliders.size(); ++i) {
     sliders[i].slider.setBounds(
         juce::Rectangle<float>(x, y, sliderWidth, h).toNearestInt());
     x += sliderWidth;

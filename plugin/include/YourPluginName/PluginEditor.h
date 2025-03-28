@@ -29,7 +29,10 @@ class AudioPluginAudioProcessorEditor : public juce::AudioProcessorEditor {
 public:
   using AttachedSliderArray = std::array<AttachedSlider, param::NumParams>;
   explicit AudioPluginAudioProcessorEditor(AudioPluginAudioProcessor &);
-  void addTabsComponent();
+  // This constructor will be called when the editor is created.
+  // It is called by the AudioProcessorEditor constructor.
+  // The editor is created when the plugin is loaded, and it is destroyed
+  // when the plugin is unloaded.
   void AddVisageApp();
   ~AudioPluginAudioProcessorEditor() override;
 

@@ -1,10 +1,13 @@
 #include "YourPluginName/PluginProcessor.h"
 #include "YourPluginName/PluginEditor.h"
+#include <juce_audio_processors/juce_audio_processors.h>
+#include <juce_core/juce_core.h>
+#include <juce_gui_basics/juce_gui_basics.h>
 
 namespace audio_plugin {
 AudioPluginAudioProcessor::AudioPluginAudioProcessor()
 #ifndef JucePlugin_PreferredChannelConfigurations
-    : AudioProcessor(
+    : foleys::MagicProcessor(
           BusesProperties()
 #if !JucePlugin_IsMidiEffect
 #if !JucePlugin_IsSynth
@@ -22,6 +25,7 @@ AudioPluginAudioProcessor::AudioPluginAudioProcessor()
     const auto id = param::toID(pID);
     params[static_cast<size_t>(i)] = apvts.getParameter(id);
   }
+  FOLEYS_SET_SOURCE_PATH(__FILE__);
 }
 
 AudioPluginAudioProcessor::~AudioPluginAudioProcessor() {}
@@ -161,13 +165,14 @@ void AudioPluginAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer,
   //   // ..do something to the data...
 }
 
-bool AudioPluginAudioProcessor::hasEditor() const {
-  return true;  // (change this to false if you choose to not supply an editor)
-}
+// bool AudioPluginAudioProcessor::hasEditor() const {
+//   return true;  // (change this to false if you choose to not supply an
+//   editor)
+// }
 
-juce::AudioProcessorEditor* AudioPluginAudioProcessor::createEditor() {
-  return new AudioPluginAudioProcessorEditor(*this);
-}
+// juce::AudioProcessorEditor* AudioPluginAudioProcessor::createEditor() {
+//   return new AudioPluginAudioProcessorEditor(*this);
+// }
 
 void AudioPluginAudioProcessor::getStateInformation(
     juce::MemoryBlock& destData) {

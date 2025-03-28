@@ -2,10 +2,22 @@
 
 #include "Params.h"
 #include <array>
+
 #include <juce_audio_processors/juce_audio_processors.h>
+#include <juce_core/juce_core.h>
+#include <juce_gui_basics/juce_gui_basics.h>
+
+// third-party includes
+JUCE_BEGIN_IGNORE_WARNINGS_GCC_LIKE(
+    "-Wunused-function") // GCC doesn't like Foley's static functions
+JUCE_BEGIN_IGNORE_WARNINGS_MSVC(
+    4458) // MSVC doesn't like Foley's hiding class members
+#include <foleys_gui_magic/foleys_gui_magic.h>
+JUCE_END_IGNORE_WARNINGS_GCC_LIKE
+JUCE_END_IGNORE_WARNINGS_MSVC
 
 namespace audio_plugin {
-class AudioPluginAudioProcessor : public juce::AudioProcessor {
+class AudioPluginAudioProcessor : public foleys::MagicProcessor {
 public:
   using RAPPtr = juce::RangedAudioParameter *;
   using RAPPtrArray = std::array<RAPPtr, param::NumParams>;
@@ -20,8 +32,8 @@ public:
   void processBlock(juce::AudioBuffer<float> &, juce::MidiBuffer &) override;
   using AudioProcessor::processBlock;
 
-  juce::AudioProcessorEditor *createEditor() override;
-  bool                        hasEditor() const override;
+  // juce::AudioProcessorEditor *createEditor() override;
+  // bool                        hasEditor() const override;
 
   const juce::String getName() const override;
 
